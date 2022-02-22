@@ -4,16 +4,15 @@ pipeline{
 	stage('terraform plan'){
 		steps{
 			sh 'pwd && ls'
-			sh 'cd ./Terraform/ && ls'
+			sh 'cd ./Terraform/ec2/ && ls'
 			sh 'pwd && ls'
-			sh 'terraform init'
-			sh 'terraform plan'
+			sh './Terraform/ec2/terraform init'
+			sh './Terraform/ec2/terraform plan'
 		}
 	}
 	stage('terraform apply'){
 		steps{
-			sh 'cd ./Terraform/ec2/'
-			sh 'terraform apply --auto-approve'
+			sh './Terraform/ec2/terraform apply --auto-approve'
 		}
 	}
 	stage('build docker backend image'){
