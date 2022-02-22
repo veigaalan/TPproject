@@ -4,7 +4,7 @@ pipeline{
 	stage('terraform plan'){
 		steps{
 			sh 'pwd && ls'
-			sh 'cd ./Terraform'
+			sh 'cd var/lib/jenkins/workspace/Apresentacao Devops/Terraform/ec2'
 			sh 'pwd && ls'
 			sh 'terraform init'
 			sh 'terraform plan'
