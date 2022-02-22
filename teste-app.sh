@@ -1,5 +1,5 @@
 #/bin/bash
-RESULT = 'wget -qO- http://localhost:4200'
+RESULT = 'wget -qO- localhost:4200'
 wget -q localhost:4200
 if [ $? -eq 0 ]
 then
