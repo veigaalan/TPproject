@@ -12,23 +12,9 @@ services:
       DB: "mongodb://root:globant@pg-db:27017/"
     ports:
       - '8000:8000'
-    depends_on:
-      - db
     networks:
      - backend
      - frontend 
-  db: 
-    image: mongo
-    hostname: mongodb
-    container_name: mongodb
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: globant
-    ports:
-      - '27017:27017'
-    networks:
-      - backend
   frontend:
     hostname: frontendjs
     container_name: frontendjs
