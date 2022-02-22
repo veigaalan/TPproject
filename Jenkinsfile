@@ -1,19 +1,6 @@
 pipeline{
 	agent any
 	stages {
-	stage('terraform plan'){
-		steps{
-			sh 'pwd && ls'
-			sh 'cd ./Terraform/ec2/ && terraform init'
-			sh 'pwd && ls'
-			sh 'cd ./Terraform/ec2/ && terraform plan'
-		}
-	}
-	stage('terraform apply'){
-		steps{
-			sh 'cd ./Terraform/ec2/ && terraform apply --auto-approve'
-		}
-	}
 	stage('build docker backend image'){
 		steps{
 			sh 'docker build -t beckendjs ./backend/.'
