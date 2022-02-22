@@ -3,6 +3,7 @@ pipeline{
 	stages {
 	stage('terraform plan'){
 		steps{
+			sh 'pwd && ls'
 			sh 'cd /Terraform/ec2/'
 			sh 'terraform plan'
 		}
@@ -33,7 +34,7 @@ pipeline{
 			sh 'sleep 10'
 		}
 	}
-	stage('test da aplicação'){
+	stage('teste da aplicação'){
 		steps{
 			sh 'chmod +x teste-app.sh'
 			sh './teste-app.sh'
