@@ -3,7 +3,6 @@ pipeline{
 	stages {
 	stage('terraform plan'){
 		steps{
-			sh 'curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash'
 			sh 'pwd && ls'
 			sh 'cd ./Terraform/ec2/ && terraform init'
 			sh 'pwd && ls'
