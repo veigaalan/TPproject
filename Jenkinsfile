@@ -6,6 +6,7 @@ pipeline{
 			sh 'pwd && ls'
 			sh 'cd ./Terraform'
 			sh 'pwd && ls'
+			sh 'terraform init'
 			sh 'terraform plan'
 		}
 	}
