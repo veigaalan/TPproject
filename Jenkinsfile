@@ -4,14 +4,14 @@ pipeline{
 	stage('terraform plan'){
 		steps{
 			sh 'pwd && ls'
-			sh 'cd Terraform'
+			sh 'cd ./Terraform'
 			sh 'pwd && ls'
 			sh 'terraform plan'
 		}
 	}
 	stage('terraform apply'){
 		steps{
-			sh 'cd Terraform/ec2/'
+			sh 'cd ./Terraform/ec2/'
 			sh 'terraform apply --auto-approve'
 		}
 	}
