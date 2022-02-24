@@ -12,5 +12,3 @@ else
     echo 'Service not working'
     exit 1  
 fi
-
-echo "teste"
