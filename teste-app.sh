@@ -10,5 +10,6 @@ then
     echo $RESULT
 else 
     echo 'Service not working'
-    exit 1  
-fi
+    exit 1
+fi 
+#teste 1
