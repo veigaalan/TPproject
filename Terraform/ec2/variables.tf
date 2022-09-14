@@ -2,6 +2,11 @@ variable "EC2-image" {
   default = ""
   type = string
 }
+
+variable "prefix" {
+  default = "tfvmex"
+}
+
 variable "instance_type" {
   default = ""
   type = string
