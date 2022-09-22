@@ -3,17 +3,17 @@ pipeline{
 	stages {
 	stage('build docker backend image'){
 		steps{
-			sh 'sudo docker build -t beckendjs ./backend/'
+			sh 'docker build -t beckendjs ./backend/'
 		}
 	}
     stage('build docker frontend image'){
 		steps{
-			sh 'sudo docker build -t frontendjs ./frontend/'
+			sh 'docker build -t frontendjs ./frontend/'
 		}
 	}
 	stage('subir docker compose'){
 		steps{
-			sh 'sudo docker compose up --build -d'
+			sh 'docker compose up --build -d'
 		}
 	}
 	stage('sleep para container'){
