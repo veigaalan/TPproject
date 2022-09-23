@@ -3,7 +3,7 @@ pipeline{
 	stages {
 	stage('build docker backend image'){
 		steps{
-			sh 'docker build -t beckendjs ./backend/'
+			sh 'docker build -t backendjs ./backend/'
 		}
 	}
     stage('build docker frontend image'){
