@@ -4,5 +4,5 @@
 
 
 module.exports = {
-  db: 'mongodb+srv://root:globant@cluster0.dhfwi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+  db: 'mongodb+srv://dbadmin:senhasegura@tpprojectcluster0.zbonpra.mongodb.net/tpdbteste?retryWrites=true&w=majority'
 };
