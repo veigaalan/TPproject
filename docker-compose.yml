@@ -9,7 +9,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       PORT: 8000
-      DB: "mongodb://dbadmin:senhasegura@tpprojectcluster0.zbonpra.mongodb.net:27017/"
+      DB: "mongodb://dbadmin:senhasegura@tpprojectcluster0.zbonpra.mongodb.net/?retryWrites=true&w=majority:27017/"
     ports:
       - '8000:8000'
     networks:
